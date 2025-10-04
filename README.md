@@ -15,11 +15,11 @@
 
 
 ✉ For correspondence regarding the code in this repository, please
-contact: Guadalupe
+contact: [Guadalupe] (https://www.bi.mpg.de/staff/130917)
 (<a href= "mailto:lopez-nava.guadalupe@bi.mpg.de">lopez-nava.guadalupe[at]bi.mpg.de</a>)
 
 ✉ For correspondence regarding the data collection , please
-contact: Stefania (mitochondria metabolism)
+contact: [Stefania] (https://www.bi.mpg.de/staff/115809) (mitochondria metabolism)
 (<a href= "mailto:stefania.casagrande@bi.mpg.de">stefania.casagrande[at]bi.mpg.de</a>) or
 Lucie (contaminants and stable isotopes)
 (<a href= "mailto:lucie.michel282@gmail.com">lucie.michel282[at]gmail.com</a>)
@@ -41,7 +41,7 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 
 -   [`dataset_MitoCont_Shearwaters.csv`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/data/dataset_MitoCont_Shearwaters.csv)
 
-[**`figures`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/figures)
+[**`figures`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/figures) all of which were created using the R package [ggplot2 v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html).
 
 -   [`Fig1`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig1.png) 
 -   [`Fig2`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig2.png) 
@@ -68,7 +68,7 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 -   [`TabS2_PFOS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOS.png) 
 
 
-[**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript)
+[**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript), all of which were created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html).
 *Note*: tables show the frequentist results only. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script
 
 
