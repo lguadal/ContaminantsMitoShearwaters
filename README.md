@@ -104,7 +104,7 @@ Each row represents an individual bird and includes information on biological at
 - **Units:** Concentrations for PFAS are expressed in ng/g, and mercury in µg/g.
 - **Stable isotopes:** δ¹³C and δ¹⁵N values are expressed relative to international standards (VPDB for carbon; Air N₂ for nitrogen).  
 - **Z-scores:** Variables ending in `.Z` are standardized (mean = 0, SD = 1) to facilitate multivariate analysis.  
-- **Mitochondrial function metrics (CMR, OXPHOS, LEAK, ETS, FCRs)** were derived from high-resolution respirometry measurements on mitochondrial samples.
+- **Mitochondrial bioenergetic traits (CMR, OXPHOS, LEAK, ETS, FCRs)** were derived from high-resolution respirometry measurements on mitochondrial samples.
 
 ---
 
