@@ -43,13 +43,32 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 
 [**`figures`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/figures)
 
--   [`Fig1`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig1.png) Study area of Scopoli’s shearwaters. 
-(a) location of Linosa Island (in purple) in the Sicilian Channel; (b) Sampling area (in purple) located in the northern part of the island (“Mannarazza”); (c) Adult Scopoli’s shearwater inside its breeding nest.
+-   [`Fig1`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig1.png) 
+-   [`Fig2`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig2.png) 
+-   [`Fig3`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig3.png) 
+-   [`Fig4`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig4.png) 
+-   [`Fig5`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png) 
+-   [`Fig6`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png)
 
--   [`Fig2`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig2.png) Mercury variation among individual traits in Scopoli’s shearwaters. Linear mixed-effects models showed that (a & b) older and male individuals had higher Hg concentrations, and that (c & d) Hg concentrations increased with SIs values. Raw data are shown as semi-transparent points. In (a), (c) and (d), regression lines are shown as a thick line with shaded 95% CrI areas. In (b), predicted means are plotted as solid shapes and 95% CrI indicated by error bars. Female data points are presented in yellow and male in blue.
--   [`Fig3`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig3.png) LEAK levels in relation to a) Mercury (Hg) and b-i) PFAS in blood samples of Scopoli’s shearwaters. A linear mixed-effects model showed that Hg positively associates with LEAK levels. Generalized linear models with Gamma distribution showed that specific PFAS negatively associated with LEAK levels. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
--   [`Fig4`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig4.png)  FCR1 levels in relation to specific PFAS detected in blood samples of Scopoli’s shearwaters during chick rearing. Generalized linear models with Gamma distribution showed that specific PFAS negatively associate with FCR1 levels. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
--   [`Fig5`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png) Mitochondrial bioenergetic traits a-b) CMR and c) ETS levels in relation to specific PFAS detected in blood samples of Scopoli’s shearwaters during chick-rearing. Generalized linear models with Gamma distribution showed that specific PFAS negatively associate with CMR levels. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
--   [`Fig6`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png) Mitochondrial bioenergetic traits in Scopoli’s shearwaters in relation to trophic position (δ¹⁵N). A Linear mixed effect model showed that δ¹5C was positively correlated with (a) LEAK and (b) FCR1 values. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
+[**`images`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/images) folder containing the graphic in the Readme and figure 1c in the manuscript
+-   [`shearwateradult.jpeg`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/images/shearwateradult.jpeg) 
+
+[**`suppinfo`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/suppinfo)
+-   [`FigS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS1.png) 
+-   [`FigS2.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS2.png) 
+-   [`FigS3.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS3.png) 
+-   [`TabS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS1.png)
+-   [`TabS2_PFDS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDS.png) 
+-   [`TabS2_PFDODA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PDODA.png) 
+-   [`TabS2_PFHPS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHPS.png) 
+-   [`TabS2_PFOA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOA.png) 
+-   [`TabS2_PFHXS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHXS.png) 
+-   [`TabS2_PFDA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDA.png) 
+-   [`TabS2_PFNA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFNA.png)
+-   [`TabS2_PFOS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOS.png) 
+
+
+[**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript)
+
 
 
