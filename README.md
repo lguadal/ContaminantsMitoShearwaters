@@ -41,6 +41,74 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 
 -   [`dataset_MitoCont_Shearwaters.csv`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/data/dataset_MitoCont_Shearwaters.csv)
 
+## Dataset: `dataset_MitoCont_Shearwaters.rds`
+
+This dataset contains physiological and contaminant measurements from Scopoli's shearwaters sampled in 2020–2021.  
+Each row represents an individual bird and includes information on biological attributes (age, body mass, sex), mitochondrial function (bioenergetic assays), contaminant concentrations (PFAS and mercury), and stable isotope ratios (δ¹³C, δ¹⁵N).
+
+---
+
+### 📊 Column descriptions
+
+| Column name | Type | Units / Scale | Description |
+|--------------|------|---------------|--------------|
+| `year` | factor | categorical (2020, 2021) | Sampling year. |
+| `nest` | factor | categorical (31 levels) | Nest identifier corresponding to breeding pair or nest site. |
+| `ring` | factor | categorical (48 levels) | Ring number identifying each individual bird. |
+| `sex` | factor | categorical (`Female`, `Male`) | Sex of the individual. |
+| `gps` | factor | categorical (`y`, `n`) | Indicates whether the bird was equipped with a GPS logger. |
+| `age` | numeric | years | Estimated age of the individual. |
+| `bodymass` | integer | g | Body mass at the time of sampling. |
+| `DateMito` | factor | date (MM/DD/YYYY) | Date when mitochondrial measurements were performed. |
+| `TimeMito` | factor | time (hh:mm:ss) | Time of day when mitochondrial assays were conducted. |
+| `CMR` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Cellular metabolic rate. |
+| `OXPHOS` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Oxidative phosphorylation. |
+| `LEAK` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Proton leak respiration rate (non-phosphorylating). |
+| `ETS` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Maximal electron transport system capacity. |
+| `FCR1` | numeric | ratio | Coupling efficiency index: proportion of LEAK to CMR respiration. |
+| `FCR2` | numeric | ratio | Flux Control Ratio 2 – leak control efficiency. |
+| `FCR3` | numeric | ratio | Flux Control Ratio 3 – coupling control index. |
+| `PFOA` | numeric | ng/g | Perfluorooctanoic acid (PFOA) concentration. |
+| `PFHPS` | numeric | ng/g | Perfluoroheptane sulfonate (PFHpS) concentration. |
+| `PFNA` | numeric | ng/g | Perfluorononanoic acid (PFNA) concentration. |
+| `P37DMOA` | numeric | ng/g | 3:7 perfluorodimethyl octanoic acid concentration. |
+| `PFOS` | numeric | ng/g | Perfluorooctane sulfonate (PFOS) concentration — major PFAS contaminant. |
+| `PFDA` | numeric | ng/g | Perfluorodecanoic acid (PFDA) concentration. |
+| `PFUNA` | numeric | ng/g | Perfluoroundecanoic acid (PFUnA) concentration. |
+| `PFDODA` | numeric | ng/g | Perfluorododecanoic acid (PFDoDA) concentration. |
+| `FTS_10_2` | numeric | ng/g | 10:2 Fluorotelomer sulfonate concentration. |
+| `PFTRIDA` | numeric | ng/g | Perfluorotridecanoic acid (PFTrDA) concentration. |
+| `PFTDA` | numeric | ng/g | Perfluorotetradecanoic acid (PFTDA) concentration. |
+| `PFHXS` | numeric | ng/g | Perfluorohexane sulfonate (PFHxS) concentration. |
+| `PFDS` | numeric | ng/g | Perfluorodecane sulfonate (PFDS) concentration. |
+| `PFOSA` | numeric | ng/g | Perfluorooctane sulfonamide (PFOSA) concentration. |
+| `SUMPFAS` | numeric | ng/g | Sum of all measured PFAS concentrations for each individual. |
+| `d13C` | numeric | ‰ (per mil, δ notation) | Stable carbon isotope ratio; indicates dietary carbon sources. |
+| `X.C` | numeric | % | Percent carbon content of the tissue. |
+| `d15N` | numeric | ‰ (per mil, δ notation) | Stable nitrogen isotope ratio; indicates trophic position. |
+| `X.N` | numeric | % | Percent nitrogen content of the tissue. |
+| `C_N` | numeric | ratio | Carbon-to-nitrogen ratio of the sample (proxy for lipid content). |
+| `hg` | numeric | µg/g dry weight | Total mercury concentration in tissue. |
+| `Notes` | factor | text | Additional comments. |
+| `d15N.Z` | numeric | standardized (Z-score) | Standardized δ¹⁵N value (centered and scaled). |
+| `d13C.Z` | numeric | standardized (Z-score) | Standardized δ¹³C value. |
+| `age.Z` | numeric | standardized (Z-score) | Standardized age of the individual. |
+| `bodymass.Z` | numeric | standardized (Z-score) | Standardized body mass. |
+| `hg.Z` | numeric | standardized (Z-score) | Standardized mercury concentration. |
+| `SUMPFAS.Z` | numeric | standardized (Z-score) | Standardized total PFAS concentration. |
+
+---
+
+### Notes
+
+- **Units:** Concentrations for PFAS are expressed in ng/g, and mercury in µg/g.
+- **Stable isotopes:** δ¹³C and δ¹⁵N values are expressed relative to international standards (VPDB for carbon; Air N₂ for nitrogen).  
+- **Z-scores:** Variables ending in `.Z` are standardized (mean = 0, SD = 1) to facilitate multivariate analysis.  
+- **Mitochondrial function metrics (CMR, OXPHOS, LEAK, ETS, FCRs)** were derived from high-resolution respirometry measurements on mitochondrial samples.
+
+---
+
+
 [**`figures`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/figures) all of which were created using the R package [ggplot2 v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html).
 
 -   [`Fig1`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig1.png) 
@@ -53,7 +121,8 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 [**`images`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/images) folder containing the graphic in the Readme and figure 1c in the manuscript
 -   [`shearwateradult.jpeg`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/images/shearwateradult.jpeg) 
 
-[**`suppinfo`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/suppinfo)
+[**`suppinfo`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/suppinfo) folder including figures and tables of supplementary information: tables created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html) and figures using  R package [ggplot2 v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html)..
+
 -   [`FigS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS1.png) 
 -   [`FigS2.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS2.png) 
 -   [`FigS3.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS3.png) 
@@ -69,7 +138,10 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 
 
 [**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript), all of which were created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html).
-*Note*: tables show the frequentist results only. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script
+
+
+
+*Note*: All tables show the frequentist results only. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script
 
 
 
