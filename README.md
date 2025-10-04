@@ -69,6 +69,8 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 
 
 [**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript)
+*Note*: tables show the frequentist results only. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script
+
 
 
 
