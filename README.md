@@ -38,3 +38,18 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
     RStudio project to run and reproduce results
 
 [**`data`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/data)
+
+-   [`dataset_MitoCont_Shearwaters.csv`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/data/dataset_MitoCont_Shearwaters.csv)
+
+[**`figures`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/figures)
+
+-   [`Fig1`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig1.png) Study area of Scopoli’s shearwaters. 
+(a) location of Linosa Island (in purple) in the Sicilian Channel; (b) Sampling area (in purple) located in the northern part of the island (“Mannarazza”); (c) Adult Scopoli’s shearwater inside its breeding nest.
+
+-   [`Fig2`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig2.png) Mercury variation among individual traits in Scopoli’s shearwaters. Linear mixed-effects models showed that (a & b) older and male individuals had higher Hg concentrations, and that (c & d) Hg concentrations increased with SIs values. Raw data are shown as semi-transparent points. In (a), (c) and (d), regression lines are shown as a thick line with shaded 95% CrI areas. In (b), predicted means are plotted as solid shapes and 95% CrI indicated by error bars. Female data points are presented in yellow and male in blue.
+-   [`Fig3`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig3.png) LEAK levels in relation to a) Mercury (Hg) and b-i) PFAS in blood samples of Scopoli’s shearwaters. A linear mixed-effects model showed that Hg positively associates with LEAK levels. Generalized linear models with Gamma distribution showed that specific PFAS negatively associated with LEAK levels. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
+-   [`Fig4`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig4.png)  FCR1 levels in relation to specific PFAS detected in blood samples of Scopoli’s shearwaters during chick rearing. Generalized linear models with Gamma distribution showed that specific PFAS negatively associate with FCR1 levels. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
+-   [`Fig5`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png) Mitochondrial bioenergetic traits a-b) CMR and c) ETS levels in relation to specific PFAS detected in blood samples of Scopoli’s shearwaters during chick-rearing. Generalized linear models with Gamma distribution showed that specific PFAS negatively associate with CMR levels. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
+-   [`Fig6`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png) Mitochondrial bioenergetic traits in Scopoli’s shearwaters in relation to trophic position (δ¹⁵N). A Linear mixed effect model showed that δ¹5C was positively correlated with (a) LEAK and (b) FCR1 values. Raw data are shown as semi-transparent points in the background. Regression line is shown a thick line with shaded 95% CrI areas. Female data points are presented in yellow and male in blue.
+
+
