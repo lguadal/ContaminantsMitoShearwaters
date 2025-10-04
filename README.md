@@ -4,7 +4,7 @@
 
 ### 
 
-#### Guadalupe Lopez-Nava<sup>1</sup>\*, Lucie Michel<sup>2</sup>\*, Giacomo Dell’Omo<sup>3</sup>, Petra Quillfeldt<sup>2</sup>,  Paco Bustamantet<sup>4</sup>, and Stefania Casagrande<sup>1</sup>
+#### Guadalupe Lopez-Nava<sup>1</sup>\*, Lucie Michel<sup>2</sup>\*, Giacomo Dell’Omo<sup>3</sup>, Petra Quillfeldt<sup>2</sup>,  Paco Bustamante<sup>4</sup>, and Stefania Casagrande<sup>1</sup>
 
 \* joint first-authors
 
