@@ -30,3 +30,11 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 
 ![](images/shearwateradult.jpeg)
 
+#### Repository Contents
+
+- [`Rscript_PaperContaminantsMito_Shearwaters_20251001.R`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/Rscript_PaperContaminantsMito_Shearwaters_20251001.R)
+    R script containing statistical analyses. All analyses are referenced according to their number in the manuscript
+- [`ContaminantsMitoShearwater.Rproj`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/ContaminantsMitoShearwater.Rproj)
+    RStudio project to run and reproduce results
+
+[**`data`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/data)
