@@ -141,4 +141,13 @@ Each row represents an individual bird and includes information on biological at
 ---
 
 
+#### Usage Policy
+
+You are welcome to view and download the materials in this repository.  
+However:
+
+- **Do not** use, modify, or share any code or data without **written permission**. by Stefania Casagrande (stefania.casagrande[at]bi.mpg.de) 
+
+© 2025 Guadalupe Lopez-Nava – All rights reserved.
+
 
