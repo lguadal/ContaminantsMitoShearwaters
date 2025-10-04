@@ -15,11 +15,11 @@
 
 
 ✉ For correspondence regarding the code in this repository, please
-contact: [Guadalupe] (https://www.bi.mpg.de/staff/130917)
+contact: [`Guadalupe`]` (https://www.bi.mpg.de/staff/130917)
 (<a href= "mailto:lopez-nava.guadalupe@bi.mpg.de">lopez-nava.guadalupe[at]bi.mpg.de</a>)
 
 ✉ For correspondence regarding the data collection , please
-contact: [Stefania] (https://www.bi.mpg.de/staff/115809) (mitochondria metabolism)
+contact: [`Stefania`] (https://www.bi.mpg.de/staff/115809) (mitochondria metabolism)
 (<a href= "mailto:stefania.casagrande@bi.mpg.de">stefania.casagrande[at]bi.mpg.de</a>) or
 Lucie (contaminants and stable isotopes)
 (<a href= "mailto:lucie.michel282@gmail.com">lucie.michel282[at]gmail.com</a>)
