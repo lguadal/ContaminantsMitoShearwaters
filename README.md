@@ -37,6 +37,38 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 - [`ContaminantsMitoShearwater.Rproj`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/ContaminantsMitoShearwater.Rproj)
     RStudio project to run and reproduce results
 
+[**`figures`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/figures) all of which were created using the R package [ggplot2 v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html).
+
+-   [`Fig1`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig1.png) 
+-   [`Fig2`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig2.png) 
+-   [`Fig3`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig3.png) 
+-   [`Fig4`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig4.png) 
+-   [`Fig5`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png) 
+-   [`Fig6`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png)
+
+[**`images`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/images) folder containing the graphic in the Readme and figure 1c in the manuscript
+-   [`shearwateradult.jpeg`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/images/shearwateradult.jpeg) 
+
+[**`suppinfo`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/suppinfo) folder including figures and tables of supplementary information: tables created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html) and figures using  R package [ggplot2 v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html)..
+
+-   [`FigS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS1.png) 
+-   [`FigS2.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS2.png) 
+-   [`FigS3.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS3.png) 
+-   [`TabS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS1.png)
+-   [`TabS2_PFDS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDS.png) 
+-   [`TabS2_PFDODA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PDODA.png) 
+-   [`TabS2_PFHPS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHPS.png) 
+-   [`TabS2_PFOA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOA.png) 
+-   [`TabS2_PFHXS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHXS.png) 
+-   [`TabS2_PFDA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDA.png) 
+-   [`TabS2_PFNA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFNA.png)
+-   [`TabS2_PFOS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOS.png) 
+
+
+[**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript), all of which were created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html).
+*Note*: All tables show the frequentist results only. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script
+
+
 [**`data`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/data)
 
 -   [`dataset_MitoCont_Shearwaters.csv`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/data/dataset_MitoCont_Shearwaters.csv)
@@ -48,7 +80,7 @@ Each row represents an individual bird and includes information on biological at
 
 ---
 
-### 📊 Column descriptions
+### Column descriptions
 
 | Column name | Type | Units / Scale | Description |
 |--------------|------|---------------|--------------|
@@ -104,45 +136,9 @@ Each row represents an individual bird and includes information on biological at
 - **Units:** Concentrations for PFAS are expressed in ng/g, and mercury in µg/g.
 - **Stable isotopes:** δ¹³C and δ¹⁵N values are expressed relative to international standards (VPDB for carbon; Air N₂ for nitrogen).  
 - **Z-scores:** Variables ending in `.Z` are standardized (mean = 0, SD = 1) to facilitate multivariate analysis.  
-- **Mitochondrial bioenergetic traits (CMR, OXPHOS, LEAK, ETS, FCRs)** were derived from high-resolution respirometry measurements on mitochondrial samples.
+- **Mitochondrial bioenergetic (CMR, OXPHOS, LEAK, ETS, FCRs)** were derived from high-resolution respirometry measurements on red blood cells samples.
 
 ---
-
-
-[**`figures`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/figures) all of which were created using the R package [ggplot2 v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html).
-
--   [`Fig1`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig1.png) 
--   [`Fig2`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig2.png) 
--   [`Fig3`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig3.png) 
--   [`Fig4`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig4.png) 
--   [`Fig5`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png) 
--   [`Fig6`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/figures/Fig5.png)
-
-[**`images`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/images) folder containing the graphic in the Readme and figure 1c in the manuscript
--   [`shearwateradult.jpeg`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/images/shearwateradult.jpeg) 
-
-[**`suppinfo`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/suppinfo) folder including figures and tables of supplementary information: tables created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html) and figures using  R package [ggplot2 v.3.3.3](https://cran.r-project.org/web/packages/ggplot2/index.html)..
-
--   [`FigS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS1.png) 
--   [`FigS2.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS2.png) 
--   [`FigS3.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS3.png) 
--   [`TabS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS1.png)
--   [`TabS2_PFDS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDS.png) 
--   [`TabS2_PFDODA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PDODA.png) 
--   [`TabS2_PFHPS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHPS.png) 
--   [`TabS2_PFOA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOA.png) 
--   [`TabS2_PFHXS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHXS.png) 
--   [`TabS2_PFDA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDA.png) 
--   [`TabS2_PFNA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFNA.png)
--   [`TabS2_PFOS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOS.png) 
-
-
-[**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript), all of which were created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html).
-
-
-
-*Note*: All tables show the frequentist results only. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script
-
 
 
 
