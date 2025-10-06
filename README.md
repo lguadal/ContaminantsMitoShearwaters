@@ -140,7 +140,6 @@ Each row represents an individual bird and includes information on biological at
 
 ---
 
-
 #### Usage Policy
 
 You are welcome to view and download the materials in this repository.  
