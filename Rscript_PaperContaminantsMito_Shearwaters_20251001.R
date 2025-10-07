@@ -3951,6 +3951,7 @@ gt_table <- final_summary %>%
 
 # Save as HTML
 gtsave(gt_table, filename = "suppinfo/TabS1.html")
+webshot("suppinfo/TabS1.html", "suppinfo/TabS1.pdf")
 
 ## Table S2 (additional analyses)----------
 ###PFOS and bodymass------
@@ -3966,6 +3967,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFOS.html")
+webshot("suppinfo/TabS2_PFOS.html", "suppinfo/TabS2_PFOS.pdf")
 
 ### Assessing model assumptions 
 
@@ -4019,6 +4021,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFHXS.html")
+webshot("suppinfo/TabS2_PFHXS.html", "suppinfo/TabS2_PFHXS.pdf")
 
 ### Assessing model assumptions 
 
@@ -4072,6 +4075,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFNA.html")
+webshot("suppinfo/TabS2_PFNA.html", "suppinfo/TabS2_PFNA.pdf")
 
 ### Assessing model assumptions 
 
@@ -4126,6 +4130,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFDODA.html")
+webshot("suppinfo/TabS2_PFDODA.html", "suppinfo/TabS2_PFDODA.pdf")
 
 ### Assessing model assumptions 
 
@@ -4179,6 +4184,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFOA.html")
+webshot("suppinfo/TabS2_PFOA.html", "suppinfo/TabS2_PFOA.pdf")
 
 ### Assessing model assumptions 
 
@@ -4233,6 +4239,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFHPS.html")
+webshot("suppinfo/TabS2_PFHPS.html", "suppinfo/TabS2_PFHPS.pdf")
 
 ### Assessing model assumptions 
 
@@ -4275,7 +4282,6 @@ sum(bsim@coef[, 2] < 0) / nsim
 
 
 #### PFDA ------
-
 mod <- glm(bodymass ~ PFDA *sex,
            data = data, 
            na.action = na.exclude)
@@ -4287,6 +4293,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFDA.html")
+webshot("suppinfo/TabS2_PFDA.html", "suppinfo/TabS2_PFDA.pdf")
 
 ### Assessing model assumptions 
 
@@ -4327,7 +4334,6 @@ sum(bsim@coef[, 2] < 0) / nsim
 
 
 #### PFDS ------
-
 mod <- glm(bodymass ~ PFDS *sex,
            data = data, 
            na.action = na.exclude)
@@ -4339,6 +4345,7 @@ anova(mod)
 
 r2(mod)
 tab_model(mod, file = "suppinfo/TabS2_PFDS.html")
+webshot("suppinfo/TabS2_PFDS.html", "suppinfo/TabS2_PFDS.pdf")
 
 ### Assessing model assumptions 
 
