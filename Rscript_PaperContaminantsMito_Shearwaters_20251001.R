@@ -7,7 +7,7 @@
 # Set the working directory
 #knitr::opts_knit$set(root.dir = getwd())
 
-data <- read.csv("data/dataset_MitoCont_Shearwaters.csv")
+data <- read.csv("data/data_MitoCont_Shearwaters.csv")
 
 # Display the first few rows of the dataset
 head(data)
@@ -49,6 +49,7 @@ library(osmdata)
 library(sjPlot)
 library(sjmisc)
 library(sjlabelled)
+library(webshot2)
 
 #To import image of shearwater and convert it to raster 
 library(ggplotify)
@@ -75,7 +76,7 @@ set.seed(123)
 
 # Convert specific columns to factors
 data <- data %>%
-  mutate(across(c(year, nest, ring, age, sex, gps, DateMito, TimeMito, Notes), as.factor))
+  mutate(across(c(year, nest, ring, age, sex,  DateMito, TimeMito, Notes), as.factor))
 
 
 # Ensure the age variable is numeric 
@@ -99,6 +100,7 @@ data$hg.Z<-scale(data$hg)
 data$SUMPFAS.Z<-scale(data$SUMPFAS)
 
 
+
 #Statistical Models -----
 
 ## Table 1 -----
@@ -119,8 +121,8 @@ print(icc)
 #Summary of the model 
 summary(mod) 
 anova(mod)
-tab_model(mod, file = "tables/Tab1a.html")#Extracting p values from frequentist results
-
+tab_model(mod, file = "tables/Tab1a.html") #Extracting p values from frequentist results
+webshot("tables/Tab1a.html", "tables/Tab1a.pdf")
 # Save the output:
 
 
@@ -179,7 +181,7 @@ mod <- glmer(SUMPFAS ~ sex + age.Z + bodymass.Z + (1 | nest),
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab1b.html") #Extracting p values from frequentist results
-
+webshot("tables/Tab1b.html", "tables/Tab1b.pdf")
 ## Assesing assumptions 
 
 # Tukey-Ascombe plot: 
@@ -243,6 +245,7 @@ print(icc)
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab2a.html") #Extracting p values from frequentist results
+webshot("tables/Tab2a.html", "tables/Tab2a.pdf")
 
 ## Assessing assumptions 
 
@@ -302,7 +305,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab2b.html")
-
+webshot("tables/Tab2b.html", "tables/Tab2b.pdf")
 ## Assessing assumptions 
 
 # Tukey-Ascombe plot: 
@@ -358,6 +361,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab3a.html")
+webshot("tables/Tab3a.html", "tables/Tab3a.pdf")
 
 ## Assesing assumptions 
 
@@ -423,6 +427,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab3b.html") #Extracting p values from frequentist results
+webshot("tables/Tab3b.html", "tables/Tab3b.pdf")
 
 ## Assesing assumptions 
 
@@ -489,6 +494,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab3c.html")
+webshot("tables/Tab3c.html", "tables/Tab3c.pdf")
 
 ## Assesing assumptions 
 
@@ -556,6 +562,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab3d.html") #Extracting p values from frequentist results
+webshot("tables/Tab3d.html", "tables/Tab3d.pdf")
 
 ## Assesing assumptions 
 
@@ -622,6 +629,8 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab3e.html")#Extracting p values from frequentist results
+webshot("tables/Tab3e.html", "tables/Tab3e.pdf")
+
 
 ## Assesing assumptions 
 
@@ -674,7 +683,6 @@ round(quantile(as.vector(bsim@ranef$TimeMito), prob = c(0.025, 0.5, 0.975)),2)
 
 ## Table 4 -----
 ### Table 4a CMR and SUMPFAS (+ predictors)-----
-
 mod <- lmer(CMR ~ SUMPFAS.Z + sex + age.Z + bodymass.Z + 
               (1 | nest) +
               (1| TimeMito), 
@@ -689,6 +697,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab4a.html") #Extracting p values from frequentist results
+webshot("tables/Tab4a.html", "tables/Tab4a.pdf")
 
 ## Assesing assumptions 
 
@@ -754,6 +763,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab4b.html") #Extracting p values from frequentist results
+webshot("tables/Tab4b.html", "tables/Tab4b.pdf")
 
 ## Assesing assumptions 
 
@@ -820,6 +830,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab4c.html") #Extracting p values from frequentist results
+webshot("tables/Tab4c.html", "tables/Tab4c.pdf")
 
 ## Assesing assumptions 
 
@@ -885,6 +896,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab4d.html") #Extracting p values from frequentist results
+webshot("tables/Tab4d.html", "tables/Tab4d.pdf")
 
 ## Assesing assumptions 
 
@@ -950,6 +962,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab4e.html") #Extracting p values from frequentist results
+webshot("tables/Tab4e.html", "tables/Tab4e.pdf")
 
 ## Assesing assumptions 
 
@@ -1011,6 +1024,7 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFOS_LEAK.html")
+webshot("tables/Tab5_PFOS_LEAK.html", "tables/Tab5_PFOS_LEAK.pdf")
 
 #Drawing conclusions 
 # Number of simulations
@@ -1034,6 +1048,7 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFHXS_LEAK.html")
+webshot("tables/Tab5_PFHXS_LEAK.html", "tables/Tab5_PFHXS_LEAK.pdf")
 
 #Drawing conclusions 
 # Number of simulations
@@ -1057,6 +1072,7 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFNA_LEAK.html")
+webshot("tables/Tab5_PFNA_LEAK.html", "tables/Tab5_PFNA_LEAK.pdf")
 
 #Drawing conclusions 
 # Number of simulations
@@ -1080,6 +1096,7 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFDODA_LEAK.html")
+webshot("tables/Tab5_PFDODA_LEAK.html", "tables/Tab5_PFDODA_LEAK.pdf")
 
 #Drawing conclusions 
 # Number of simulations
@@ -1103,6 +1120,8 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFOA_LEAK.html")
+webshot("tables/Tab5_PFOA_LEAK.html", "tables/Tab5_PFOA_LEAK.pdf")
+
 
 #Drawing conclusions 
 # Number of simulations
@@ -1150,6 +1169,7 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFHPS_LEAK.html")
+webshot("tables/Tab5_PFHPS_LEAK.html", "tables/Tab5_PFHPS_LEAK.pdf")
 
 #Drawing conclusions 
 # Number of simulations
@@ -1197,6 +1217,7 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFDA_CMR.html")
+webshot("tables/Tab5_PFDA_CMR.html", "tables/Tab5_PFDA_CMR.pdf")
 
 #Drawing conclusions 
 # Number of simulations
@@ -1243,6 +1264,8 @@ round(coef(mod),3)
 
 r2(mod)
 tab_model(mod, file = "tables/Tab5_PFDS_CMR.html")
+webshot("tables/Tab5_PFDS_CMR.html", "tables/Tab5_PFDS_CMR.pdf")
+
 
 #Drawing conclusions 
 # Number of simulations
@@ -1318,6 +1341,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab6a.html") #Extracting p values from frequentist results
+webshot("tables/Tab6a.html", "tables/Tab6a.pdf")
 
 ## Assesing assumptions 
 
@@ -1384,6 +1408,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab6b.html") #Extracting p values from frequentist results
+webshot("tables/Tab6b.html", "tables/Tab6b.pdf")
 
 ## Assesing assumptions 
 
@@ -1450,6 +1475,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab6c.html") #Extracting p values from frequentist results
+webshot("tables/Tab6c.html", "tables/Tab6c.pdf")
 
 ## Assesing assumptions 
 
@@ -1515,6 +1541,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab6d.html") #Extracting p values from frequentist results
+webshot("tables/Tab6d.html", "tables/Tab6d.pdf")
 
 ## Assesing assumptions 
 
@@ -1567,7 +1594,6 @@ round(quantile(as.vector(bsim@ranef$nest), prob = c(0.025, 0.5, 0.975)),2)
 round(quantile(as.vector(bsim@ranef$TimeMito), prob = c(0.025, 0.5, 0.975)),2)
 
 ### Table 6e FCR1 and d15N (+ predictors)-----
-
 mod <- lmer(FCR1 ~ d15N.Z + sex + age.Z + bodymass.Z + year + 
               (1 | nest) +
               (1| TimeMito), 
@@ -1582,6 +1608,7 @@ MuMIn::r.squaredGLMM(mod) #Extracting conditional and marginal R2
 summary(mod) 
 anova(mod)
 tab_model(mod, file = "tables/Tab6e.html") #Extracting p values from frequentist results
+webshot("tables/Tab6e.html", "tables/Tab6e.pdf")
 
 ## Assesing assumptions 
 
