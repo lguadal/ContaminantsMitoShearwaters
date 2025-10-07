@@ -3,7 +3,7 @@
 ## Pollutant Exposure Shapes Mitochondrial Bioenergetics in a Wild Seabird *Calonectris diomedea*
 
 
-#### Guadalupe Lopez-Nava<sup>1</sup>\*, Lucie Michel<sup>2</sup>\*, Giacomo Dell’Omo<sup>3</sup>, Petra Quillfeldt<sup>2</sup>,  Paco Bustamante<sup>4</sup>, and Stefania Casagrande<sup>1</sup>
+### Guadalupe Lopez-Nava<sup>1</sup>\*, Lucie Michel<sup>2</sup>\*, Giacomo Dell’Omo<sup>3</sup>, Petra Quillfeldt<sup>2</sup>,  Paco Bustamante<sup>4</sup>, and Stefania Casagrande<sup>1</sup>
 
 \* joint first-authors
 
@@ -13,19 +13,20 @@
 4)  *Littoral Environnement et Sociétés (LIENSs), UMR 7266 CNRS-Université de la Rochelle, 2 rue Olympe de Gouges, 17000 La Rochelle, France*
 
 
-✉ For correspondence regarding the code in this repository, please
+✉ For correspondence regarding the code, statistical analyses or the study system , please
 contact: Guadalupe
 (<a href= "mailto:lopez-nava.guadalupe@bi.mpg.de">lopez-nava.guadalupe[at]bi.mpg.de</a>)
 
-✉ For correspondence regarding the data collection , please
-contact: Stefania (mitochondrial metabolism)
+✉ For correspondence regarding the data collection and study system please
+contact: 
+Stefania (mitochondrial metabolism)
 (<a href= "mailto:stefania.casagrande@bi.mpg.de">stefania.casagrande[at]bi.mpg.de</a>) or
 Lucie (contaminants and stable isotopes)
 (<a href= "mailto:lucie.michel282@gmail.com">lucie.michel282[at]gmail.com</a>)
 
 In this repository you can find all the data and code needed to
-reproduce our investigation on contaminants and mitochondria 
-bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitored over 2 years in Linosa Island located in the Sicilian Channel (IT)
+reproduce our study on contaminants and mitochondria 
+bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) sampled over 2 years in Linosa Island located in the Sicilian Channel (IT)
 
 ![](images/shearwateradult.jpeg)
 
@@ -53,7 +54,7 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 -   [`FigS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS1.png) 
 -   [`FigS2.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS2.png) 
 -   [`FigS3.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS3.png) 
--   [`TabS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS1.png)
+-   [`TabS1.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS1.pdf)
 -   [`TabS2_PFDS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDS.pdf) 
 -   [`TabS2_PFDODA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PDODA.pdf) 
 -   [`TabS2_PFHPS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHPS.pdf) 
@@ -86,7 +87,7 @@ Each row represents an individual bird and includes information on biological at
 |--------------|------|---------------|--------------|
 | `year` | factor | categorical (2020, 2021) | Sampling year. |
 | `nest` | factor | categorical (31 levels) | Nest identifier corresponding to nest site. |
-| `ring` | factor | categorical (48 levels) | Ring number identifying each individual bird. Real ring numbers have been replaced with anonymized (dummy) identifiers, but the "original"real"" IDs can be provided upon request. |
+| `ring` | factor | categorical (48 levels) | Ring number identifying each individual bird. Real ring numbers have been replaced with anonymized (dummy) identifiers, but the "real" ring numbers can be provided upon request. |
 | `sex` | factor | categorical (`Female`, `Male`) | Sex of the individual. |
 | `age` | numeric | years | Estimated age of the individual. |
 | `bodymass` | integer | g | Body mass at the time of sampling. |
@@ -143,7 +144,7 @@ expressed in pmol O₂ s⁻¹ mg⁻¹ and derived from high-resolution respirome
 You are welcome to view and download the materials in this repository.  
 However:
 
-- **Do not** use, modify, or share any code or data without **written permission** by Stefania Casagrande (stefania.casagrande[at]bi.mpg.de) 
+- **Do not** use, modify, or share any code or data without **written permission** by Stefania Casagrande (<a href= "mailto:stefania.casagrande@bi.mpg.de">stefania.casagrande[at]bi.mpg.de</a>) 
 
 © 2025 Guadalupe Lopez-Nava – All rights reserved.
 
