@@ -90,7 +90,7 @@ Each row represents an individual bird and includes information on biological at
 | `ring` | factor | categorical (48 levels) | Ring number identifying each individual bird. Real ring numbers have been replaced with anonymized (dummy) identifiers, but the "real" ring numbers can be provided upon request. |
 | `sex` | factor | categorical (`Female`, `Male`) | Sex of the individual. |
 | `age` | numeric | years | Estimated age of the individual. |
-| `bodymass` | integer | g | Body mass at the time of sampling. |
+| `bodymass` | integer | g | Body mass in grams at the time of sampling. |
 | `DateMito` | factor | date (MM/DD/YYYY) | Date when mitochondrial measurements were performed. |
 | `TimeMito` | factor | time (hh:mm:ss) | Time of day when mitochondrial assays were conducted. |
 | `CMR` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Cellular metabolic rate. |
