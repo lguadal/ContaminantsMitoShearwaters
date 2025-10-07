@@ -2,7 +2,6 @@
 
 ## Pollutant Exposure Shapes Mitochondrial Bioenergetics in a Wild Seabird *Calonectris diomedea*
 
-### 
 
 #### Guadalupe Lopez-Nava<sup>1</sup>\*, Lucie Michel<sup>2</sup>\*, Giacomo Dell’Omo<sup>3</sup>, Petra Quillfeldt<sup>2</sup>,  Paco Bustamante<sup>4</sup>, and Stefania Casagrande<sup>1</sup>
 
@@ -55,25 +54,26 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) monitor
 -   [`FigS2.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS2.png) 
 -   [`FigS3.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS3.png) 
 -   [`TabS1.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS1.png)
--   [`TabS2_PFDS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDS.png) 
--   [`TabS2_PFDODA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PDODA.png) 
--   [`TabS2_PFHPS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHPS.png) 
--   [`TabS2_PFOA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOA.png) 
--   [`TabS2_PFHXS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHXS.png) 
--   [`TabS2_PFDA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDA.png) 
--   [`TabS2_PFNA.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFNA.png)
--   [`TabS2_PFOS.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOS.png) 
+-   [`TabS2_PFDS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDS.pdf) 
+-   [`TabS2_PFDODA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PDODA.pdf) 
+-   [`TabS2_PFHPS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHPS.pdf) 
+-   [`TabS2_PFOA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOA.pdf) 
+-   [`TabS2_PFHXS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHXS.pdf) 
+-   [`TabS2_PFDA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDA.pdf) 
+-   [`TabS2_PFNA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFNA.pdf)
+-   [`TabS2_PFOS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOS.pdf) 
 
 
 [**`tables`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/tables) tables from Results section (referenced by table number in manuscript), all of which were created using the R package [gt v.0.2.2](https://cran.r-project.org/web/packages/gt/index.html).
-*Note*: All tables show the frequentist results only. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script
+*Note*: All tables (including those from the supplementary information) only show the frequentist results. For credible intervals resulting from models using Bayesian statistics refer to code section of each specified model in the R script.
 
 
 [**`data`**](https://github.com/lguadal/ContaminantsMitoShearwaters/tree/main/data)
 
--   [`dataset_MitoCont_Shearwaters.csv`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/data/dataset_MitoCont_Shearwaters.csv)
+-   [`data_MitoCont_Shearwaters.csv`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/data/data_MitoCont_Shearwaters.csv)
+-   [`data_MitoCont_Shearwaters.rds`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/data/data_MitoCont_Shearwaters.rds)
 
-## Dataset: `dataset_MitoCont_Shearwaters.rds`
+## Dataset description: 
 
 This dataset contains physiological and contaminant measurements from Scopoli's shearwaters sampled in 2020–2021.  
 Each row represents an individual bird and includes information on biological attributes (age, body mass, sex), mitochondrial function (bioenergetic assays), contaminant concentrations (PFAS and mercury), and stable isotope ratios (δ¹³C, δ¹⁵N).
@@ -85,10 +85,9 @@ Each row represents an individual bird and includes information on biological at
 | Column name | Type | Units / Scale | Description |
 |--------------|------|---------------|--------------|
 | `year` | factor | categorical (2020, 2021) | Sampling year. |
-| `nest` | factor | categorical (31 levels) | Nest identifier corresponding to breeding pair or nest site. |
-| `ring` | factor | categorical (48 levels) | Ring number identifying each individual bird. |
+| `nest` | factor | categorical (31 levels) | Nest identifier corresponding to nest site. |
+| `ring` | factor | categorical (48 levels) | Ring number identifying each individual bird. Real ring numbers have been replaced with anonymized (dummy) identifiers, but the "original"real"" IDs can be provided upon request. |
 | `sex` | factor | categorical (`Female`, `Male`) | Sex of the individual. |
-| `gps` | factor | categorical (`y`, `n`) | Indicates whether the bird was equipped with a GPS logger. |
 | `age` | numeric | years | Estimated age of the individual. |
 | `bodymass` | integer | g | Body mass at the time of sampling. |
 | `DateMito` | factor | date (MM/DD/YYYY) | Date when mitochondrial measurements were performed. |
@@ -97,22 +96,20 @@ Each row represents an individual bird and includes information on biological at
 | `OXPHOS` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Oxidative phosphorylation. |
 | `LEAK` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Proton leak respiration rate (non-phosphorylating). |
 | `ETS` | numeric | pmol O₂ s⁻¹ mg⁻¹ | Maximal electron transport system capacity. |
-| `FCR1` | numeric | ratio | Coupling efficiency index: proportion of LEAK to CMR respiration. |
-| `FCR2` | numeric | ratio | Flux Control Ratio 2 – leak control efficiency. |
-| `FCR3` | numeric | ratio | Flux Control Ratio 3 – coupling control index. |
+| `FCR1` | numeric | ratio | Coupling inefficiency index: proportion of LEAK to CMR respiration. |
 | `PFOA` | numeric | ng/g | Perfluorooctanoic acid (PFOA) concentration. |
-| `PFHPS` | numeric | ng/g | Perfluoroheptane sulfonate (PFHpS) concentration. |
+| `PFHPS` | numeric | ng/g | Perfluoroheptanesulfonic acid (PFHpS) concentration. |
 | `PFNA` | numeric | ng/g | Perfluorononanoic acid (PFNA) concentration. |
-| `P37DMOA` | numeric | ng/g | 3:7 perfluorodimethyl octanoic acid concentration. |
-| `PFOS` | numeric | ng/g | Perfluorooctane sulfonate (PFOS) concentration — major PFAS contaminant. |
+| `P37DMOA` | numeric | ng/g | Perfluoro-3,7-dimethyloctanoic acid concentration. |
+| `PFOS` | numeric | ng/g | Perfluorooctanosulfonic acid (PFOS) concentration. |
 | `PFDA` | numeric | ng/g | Perfluorodecanoic acid (PFDA) concentration. |
 | `PFUNA` | numeric | ng/g | Perfluoroundecanoic acid (PFUnA) concentration. |
 | `PFDODA` | numeric | ng/g | Perfluorododecanoic acid (PFDoDA) concentration. |
-| `FTS_10_2` | numeric | ng/g | 10:2 Fluorotelomer sulfonate concentration. |
+| `FTS_10_2` | numeric | ng/g | 0:2 Fluorotelomer sulfonic acid concentration. |
 | `PFTRIDA` | numeric | ng/g | Perfluorotridecanoic acid (PFTrDA) concentration. |
 | `PFTDA` | numeric | ng/g | Perfluorotetradecanoic acid (PFTDA) concentration. |
-| `PFHXS` | numeric | ng/g | Perfluorohexane sulfonate (PFHxS) concentration. |
-| `PFDS` | numeric | ng/g | Perfluorodecane sulfonate (PFDS) concentration. |
+| `PFHXS` | numeric | ng/g | Perfluorohexane sulfonic acid (PFHxS) concentration. |
+| `PFDS` | numeric | ng/g | Perfluorodecane sulfonic acid (PFDS) concentration. |
 | `PFOSA` | numeric | ng/g | Perfluorooctane sulfonamide (PFOSA) concentration. |
 | `SUMPFAS` | numeric | ng/g | Sum of all measured PFAS concentrations for each individual. |
 | `d13C` | numeric | ‰ (per mil, δ notation) | Stable carbon isotope ratio; indicates dietary carbon sources. |
@@ -136,7 +133,8 @@ Each row represents an individual bird and includes information on biological at
 - **Units:** Concentrations for PFAS are expressed in ng/g, and mercury in µg/g.
 - **Stable isotopes:** δ¹³C and δ¹⁵N values are expressed relative to international standards (VPDB for carbon; Air N₂ for nitrogen).  
 - **Z-scores:** Variables ending in `.Z` are standardized (mean = 0, SD = 1) to facilitate multivariate analysis.  
-- **Mitochondrial bioenergetic (CMR, OXPHOS, LEAK, ETS, FCRs)** were derived from high-resolution respirometry measurements on red blood cells samples.
+- **Mitochondrial bioenergetic (CMR, OXPHOS, LEAK, ETS, FCR1)** All traits (except FCR1, which is a ratio) are
+expressed in pmol O₂ s⁻¹ mg⁻¹ and derived from high-resolution respirometry measurements on red blood cells samples.
 
 ---
 
@@ -145,7 +143,7 @@ Each row represents an individual bird and includes information on biological at
 You are welcome to view and download the materials in this repository.  
 However:
 
-- **Do not** use, modify, or share any code or data without **written permission**. by Stefania Casagrande (stefania.casagrande[at]bi.mpg.de) 
+- **Do not** use, modify, or share any code or data without **written permission** by Stefania Casagrande (stefania.casagrande[at]bi.mpg.de) 
 
 © 2025 Guadalupe Lopez-Nava – All rights reserved.
 
