@@ -106,7 +106,7 @@ Each row represents an individual bird and includes information on biological at
 | `PFDA` | numeric | ng/g | Perfluorodecanoic acid (PFDA) concentration. |
 | `PFUNA` | numeric | ng/g | Perfluoroundecanoic acid (PFUnA) concentration. |
 | `PFDODA` | numeric | ng/g | Perfluorododecanoic acid (PFDoDA) concentration. |
-| `FTS_10_2` | numeric | ng/g | 0:2 Fluorotelomer sulfonic acid concentration. |
+| `FTS_10_2` | numeric | ng/g | 0:2 Fluorotelomer sulfonic (FTS_10_2) acid concentration. |
 | `PFTRIDA` | numeric | ng/g | Perfluorotridecanoic acid (PFTrDA) concentration. |
 | `PFTDA` | numeric | ng/g | Perfluorotetradecanoic acid (PFTDA) concentration. |
 | `PFHXS` | numeric | ng/g | Perfluorohexane sulfonic acid (PFHxS) concentration. |
