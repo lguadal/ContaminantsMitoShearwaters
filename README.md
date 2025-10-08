@@ -56,7 +56,7 @@ bioenergetic metabolism in Scopoli's shearwater (*Calonectris diomedea*) sampled
 -   [`FigS3.png`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/FigS3.png) 
 -   [`TabS1.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS1.pdf)
 -   [`TabS2_PFDS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDS.pdf) 
--   [`TabS2_PFDODA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PDODA.pdf) 
+-   [`TabS2_PFDODA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFDODA.pdf) 
 -   [`TabS2_PFHPS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHPS.pdf) 
 -   [`TabS2_PFOA.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFOA.pdf) 
 -   [`TabS2_PFHXS.pdf`](https://github.com/lguadal/ContaminantsMitoShearwaters/blob/main/suppinfo/TabS2_PFHXS.pdf) 
@@ -101,7 +101,7 @@ Each row represents an individual bird and includes information on biological at
 | `PFOA` | numeric | ng/g | Perfluorooctanoic acid (PFOA) concentration. |
 | `PFHPS` | numeric | ng/g | Perfluoroheptanesulfonic acid (PFHpS) concentration. |
 | `PFNA` | numeric | ng/g | Perfluorononanoic acid (PFNA) concentration. |
-| `P37DMOA` | numeric | ng/g | Perfluoro-3,7-dimethyloctanoic acid concentration. |
+| `P37DMOA` | numeric | ng/g | Perfluoro-3,7-dimethyloctanoic acid (P37DMOA) concentration. |
 | `PFOS` | numeric | ng/g | Perfluorooctanosulfonic acid (PFOS) concentration. |
 | `PFDA` | numeric | ng/g | Perfluorodecanoic acid (PFDA) concentration. |
 | `PFUNA` | numeric | ng/g | Perfluoroundecanoic acid (PFUnA) concentration. |
