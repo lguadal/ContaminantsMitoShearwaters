@@ -1677,19 +1677,23 @@ linosa_sf <- st_as_sf(linosa_coords, coords = c("lon", "lat"), crs = 4326)
 # Crop map to Mediterranean bounding box (roughly)
 med_bbox <- st_bbox(c(xmin = -1, xmax = 28, ymin = 30, ymax = 44), crs = st_crs(4326))
 
+med_bbox <- st_bbox(c(xmin = 6, xmax = 19, ymin = 30, ymax = 44), crs = st_crs(4326))
+
 # Plot map zoomed to Mediterranean Sea and add Linosa point
 linosa_medit <-ggplot() +
   geom_sf(data = world, fill = "antiquewhite") +
-  geom_sf(data = linosa_sf, color = "purple", size = 4, shape = 18) +
+  geom_sf(data = linosa_sf, color = "purple", size = 5, shape = 18) +
   coord_sf(xlim = c(med_bbox["xmin"], med_bbox["xmax"]),
            ylim = c(med_bbox["ymin"], med_bbox["ymax"]),
            expand = FALSE) +
   annotation_north_arrow(location = "tl", which_north = "true", 
                          style = north_arrow_orienteering) +
-  labs(title = "Linosa Island in the Mediterranean Sea") +
+  labs(title = "Linosa Island") +
   theme_minimal()
 
 linosa_medit
+
+#ggsave("locationlinosa2.jpeg", plot = linosa_medit)
 
 
 # Query OpenStreetMap for Linosa Island polygon
@@ -1746,6 +1750,7 @@ combined_plot<-ggarrange(
   font.label = list(size = 20, face = "bold", color = "black"),
   align = "hv" 
 )
+
 
 
 # Save the combined plot
