@@ -1693,7 +1693,7 @@ linosa_medit <-ggplot() +
 
 linosa_medit
 
-#ggsave("locationlinosa2.jpeg", plot = linosa_medit)
+ggsave("locationlinosa2.jpeg", plot = linosa_medit)
 
 
 # Query OpenStreetMap for Linosa Island polygon
@@ -1718,13 +1718,15 @@ manarazza_sf <- st_as_sf(manarazza_coords, coords = c("lon", "lat"), crs = st_cr
 linosa <- ggplot() +
   geom_sf(data = linosa_polygon, fill = "antiquewhite") +
   geom_sf(data = manarazza_sf, color = "purple", size = 4, shape=18) +
-  coord_sf(xlim = c(12.84, 12.90), ylim = c(35.85, 35.88)) +
-  scale_y_continuous(breaks = seq(35.85, 35.88, by = 0.01)) +  # adjust y-axis breaks
+  coord_sf(xlim = c(12.84, 12.90), ylim = c(35.84, 35.89)) +
+  scale_y_continuous(breaks = seq(35.84, 35.89, by = 0.01)) +  # adjust y-axis breaks
   scale_x_continuous(breaks = seq(12.84, 12.90, by = 0.02)) +
   labs(title = "Sampling area on Linosa Island") +
   annotation_north_arrow(location = "tl", which_north = "true", 
                          style = north_arrow_orienteering) +
   theme_minimal()
+
+
 
 linosa
 
@@ -1746,7 +1748,8 @@ combined_plot<-ggarrange(
   labels = c("A", "B", "C"),
   label.x = 0.05,            # Moves label closer to left edge
   label.y = 0.95,  
-  widths = c(1, 1, 0.7),
+  widths = c(1, 1
+            , 0.7),
   font.label = list(size = 20, face = "bold", color = "black"),
   align = "hv" 
 )
