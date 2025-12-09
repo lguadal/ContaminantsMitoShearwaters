@@ -1804,6 +1804,9 @@ count_data <- data %>%
   summarise(N = n(), .groups = "drop")
 
 
+# Create a label column with italic "n"
+count_data$label <- paste0("italic(n) == ", count_data$N)
+
 # Create the plot
 hg_sex_year_plot <- ggplot(data = data, aes(x = sex, y = hg, shape=sex)) +
   geom_jitter(position = position_jitter(width = 0.08), 
@@ -1819,8 +1822,10 @@ hg_sex_year_plot <- ggplot(data = data, aes(x = sex, y = hg, shape=sex)) +
              position = position_dodge(width = 0.5), stroke = 1.5,  size = 3, alpha = 1, show.legend = FALSE) +
   geom_errorbar(data = newdat, aes(x = sex, y = fit, ymin = lwr, ymax = upr, color = sex),
                 width = 0.2, color = "black", position = position_dodge(width = 0.9), show.legend = FALSE) +
-  geom_text(data = count_data, aes(x = sex, y = min(data$hg, na.rm = TRUE) - 0.5, label = paste("n =", N)), 
-            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE) +  # Add count labels
+  geom_text(data = count_data, aes(x = sex, y = min(data$hg, na.rm = TRUE) - 0.5,
+                                   label = paste0("italic(n) == ", N)), 
+            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", 
+            show.legend = FALSE, parse = TRUE) +  # Add count labels
   scale_y_continuous(limits = c(0, max(data$hg +1, na.rm = TRUE))) +
   custom_theme 
   
@@ -1894,8 +1899,8 @@ p_age_hg <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "right")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE ) + 
   geom_line(data = newdat, aes(x = age, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = age, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = age, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -1967,8 +1972,8 @@ p_d15N_hg <- ggplot() + # Start without default data or aes
   )  +
   scale_x_continuous(breaks = seq(min(data$d15N, na.rm = TRUE), max(data$d15N, na.rm = TRUE), by = 1)) + # Set age ticks by 3
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) +
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) +
   custom_theme +
   theme(legend.position = "none")+
   geom_line(data = newdat, aes(x = d15N, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
@@ -2024,8 +2029,8 @@ p_d13C_hg <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5,parse = TRUE
   ) +
   geom_line(data = newdat, aes(x = d13C, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = d13C, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
@@ -2063,6 +2068,12 @@ mod <- lmer(LEAK ~ hg + sex +age + bodymass + year + (1|nest) + (1|TimeMito ),
             data = data,
             na.action = na.omit)
 
+mod <- lmer(LEAK ~ hg + sex +age + bodymass + year + (1|TimeMito ), 
+            data = data,
+            na.action = na.omit)
+
+summary(mod)
+
 # Number of simulations
 nsim <- 10000
 
@@ -2072,6 +2083,7 @@ str(bsim)  # Show structure of the simulated data
 
 # Transform effects from log-link function to natural values using 'exp()'
 round(apply(bsim@fixef, 2, quantile, prob = c(0.025, 0.5, 0.975)), 2)
+
 
 # Calculate the range of values for inddependent variable
 range_hg <-range(data$hg, na.rm = TRUE)
@@ -2089,6 +2101,9 @@ Xmat <- model.matrix(~ hg + sex + age + bodymass + year
                      , data=newdat)
 
 fitmat <- matrix(ncol=nsim, nrow=nrow(newdat))
+Xmat[, "year2021"]<-0.5
+Xmat[, "sexMale"]<-0.5
+
 for(i in 1:nsim) fitmat[,i] <- Xmat%*%bsim@fixef[i,]
 newdat$lwr <- apply(fitmat, 1, quantile, prob=0.025)
 newdat$upr <- apply(fitmat, 1, quantile, prob=0.975)
