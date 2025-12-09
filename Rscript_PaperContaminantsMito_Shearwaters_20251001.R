@@ -2129,7 +2129,7 @@ p_leak_hg <-ggplot() +
   scale_fill_manual(values = color_palette) +
   labs(
     x = "Mercury (µg/mg)",        
-    y = "<b>LEAK</b> pmol O2sec-1ml-1", # Rename y-axis
+    y = expression(pmol~O[2]~sec^{-1}~ml^{-1}) , 
     color = "Sex",
     fill = "Sex",
     shape= "Sex"
@@ -2142,8 +2142,8 @@ p_leak_hg <-ggplot() +
   scale_x_continuous(breaks = seq(min(data$hg, na.rm = TRUE), max(data$hg, na.rm = TRUE), by = 3)) + # Set age ticks by 3
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE
   )
 
 p_leak_hg
@@ -2259,8 +2259,8 @@ p1<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFOS, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFOS, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = PFOS, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -2383,8 +2383,8 @@ p2<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFHXS, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFHXS, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFHXS, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -2502,8 +2502,8 @@ p3<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFNA, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFNA, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFNA, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -2621,8 +2621,8 @@ p4<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFDODA, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFDODA, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFDODA, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -2736,8 +2736,8 @@ p5<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFOA, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFOA, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFOA, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -2853,8 +2853,8 @@ p6<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFHPS, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFHPS, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFHPS, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -2966,8 +2966,8 @@ p7<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFDA, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFDA, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFDA, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -3083,8 +3083,8 @@ p8<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFDS, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFDS, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFDS, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -3235,8 +3235,8 @@ p1<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFOA, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFOA, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFOA, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -3353,8 +3353,8 @@ p2<-ggplot() + # Start without default data or aes
   ) +
   custom_theme +
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFHPS, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFHPS, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFHPS, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -3493,8 +3493,8 @@ p1<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFDA, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFDA, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFDA, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -3592,7 +3592,7 @@ head(newdat) # Display the first few rows of 'newdat'
 color_palette <- c("#E69F00", "#56B4E9")
 
 
-total_count <- nrow(data[!is.na(data$PFDS) & !is.na(data$CRM), ])
+(total_count <- nrow(data[!is.na(data$PFDS) & !is.na(data$CMR), ]))
 # Update plot
 p2<-ggplot() + # Start without default data or aes
   geom_jitter(data = data, aes(x = PFDS, y = CMR, color = sex, fill = sex, shape =sex), 
@@ -3609,8 +3609,8 @@ p2<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFDS, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFDS, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFDS, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -3726,8 +3726,8 @@ p3<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "right")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = PFDS, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = PFDS, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x =PFDS, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -3818,8 +3818,8 @@ p_d15N_LEAK <- ggplot() + # Start without default data or aes
   )  +
   scale_x_continuous(breaks = seq(min(data$d15N, na.rm = TRUE), max(data$d15N, na.rm = TRUE), by = 1)) + # Set age ticks by 3
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) +
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) +
   custom_theme +
   theme(legend.position = "none")+
   geom_line(data = newdat, aes(x = d15N, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
@@ -3885,8 +3885,8 @@ p_d15N_FCR1 <- ggplot() + # Start without default data or aes
   )  +
   scale_x_continuous(breaks = seq(min(data$d15N, na.rm = TRUE), max(data$d15N, na.rm = TRUE), by = 1)) + # Set age ticks by 3
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) +
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) +
   custom_theme +
   theme(legend.position = "right")+
   geom_line(data = newdat, aes(x = d15N, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
