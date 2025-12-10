@@ -4473,8 +4473,8 @@ p1 <- ggplot(data = data, aes(x = sex, y = CMR, shape= sex, shape = sex)) +
              position = position_dodge(width = 0.5), stroke = 1.5,  size = 3, alpha = 1, show.legend = FALSE) +
   geom_errorbar(data = newdat, aes(x = sex, y = fit, ymin = lwr, ymax = upr, color = sex),
                 width = 0.2, color = "black", position = position_dodge(width = 0.9), show.legend = FALSE) +
-  geom_text(data = count_data, aes(x = sex, y = min(data$CMR, na.rm = TRUE) - 80, label = paste("n =", N)), 
-            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE) +  # Add count labels
+  geom_text(data = count_data, aes(x = sex, y = min(data$CMR, na.rm = TRUE) - 80, label = paste0("italic(n) == ", N)), 
+            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE, parse = TRUE) +  # Add count labels
   scale_y_continuous(limits = c(0, max(data$CMR, na.rm = TRUE))) +
   custom_theme 
 
@@ -4546,8 +4546,8 @@ p2 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = age, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = age, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = age, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -4620,8 +4620,8 @@ p3 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = bodymass, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = bodymass, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = bodymass, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -4699,8 +4699,8 @@ p4 <- ggplot(data = data, aes(x = sex, y = OXPHOS, shape= sex)) +
              position = position_dodge(width = 0.5), stroke = 1.5,  size = 3, alpha = 1, show.legend = FALSE) +
   geom_errorbar(data = newdat, aes(x = sex, y = fit, ymin = lwr, ymax = upr, color = sex),
                 width = 0.2, color = "black", position = position_dodge(width = 0.9), show.legend = FALSE) +
-  geom_text(data = count_data, aes(x = sex, y = min(data$CMR, na.rm = TRUE) - 80, label = paste("n =", N)), 
-            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE) +  # Add count labels
+  geom_text(data = count_data, aes(x = sex, y = min(data$CMR, na.rm = TRUE) - 80, label = paste0("italic(n) == ", N)), 
+            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE, parse = TRUE) +  # Add count labels
   scale_y_continuous(limits = c(0, max(data$CMR, na.rm = TRUE))) +
   custom_theme 
 
@@ -4773,8 +4773,8 @@ p5 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = age, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = age, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = age, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -4852,8 +4852,8 @@ p6 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = bodymass, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = bodymass, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = bodymass, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -4931,8 +4931,8 @@ p7 <- ggplot(data = data, aes(x = sex, y = ETS, shape = sex)) +
              position = position_dodge(width = 0.5), stroke = 1.5,  size = 3, alpha = 1, show.legend = FALSE) +
   geom_errorbar(data = newdat, aes(x = sex, y = fit, ymin = lwr, ymax = upr, color = sex),
                 width = 0.2, color = "black", position = position_dodge(width = 0.9), show.legend = FALSE) +
-  geom_text(data = count_data, aes(x = sex, y = min(data$ETS, na.rm = TRUE) - 5, label = paste("n =", N)), 
-            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE) +  # Add count labels
+  geom_text(data = count_data, aes(x = sex, y = min(data$ETS, na.rm = TRUE) - 5, label = paste0("italic(n) == ", N)), 
+            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE, parse = TRUE) +  # Add count labels
   scale_y_continuous(limits = c(0, max(data$ETS, na.rm = TRUE))) +
   custom_theme 
 
@@ -5004,8 +5004,8 @@ p8 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = age, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = age, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = age, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -5080,8 +5080,8 @@ p9 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = bodymass, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = bodymass, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = bodymass, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -5160,8 +5160,8 @@ p10 <- ggplot(data = data, aes(x = sex, y = LEAK, shape = sex)) +
              position = position_dodge(width = 0.5), stroke = 1.5,  size = 3, alpha = 1, show.legend = FALSE) +
   geom_errorbar(data = newdat, aes(x = sex, y = fit, ymin = lwr, ymax = upr, color = sex),
                 width = 0.2, color = "black", position = position_dodge(width = 0.9), show.legend = FALSE) +
-  geom_text(data = count_data, aes(x = sex, y = min(data$LEAK, na.rm = TRUE) - 5, label = paste("n =", N)), 
-            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE) +  # Add count labels
+  geom_text(data = count_data, aes(x = sex, y = min(data$LEAK, na.rm = TRUE) - 5, label = paste0("italic(n) == ", N)), 
+            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE, parse = TRUE) +  # Add count labels
   scale_y_continuous(limits = c(0, max(data$LEAK, na.rm = TRUE))) +
   custom_theme 
 
@@ -5234,8 +5234,8 @@ p11 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = age, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = age, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = age, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -5312,8 +5312,8 @@ p12 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = bodymass, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = bodymass, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = bodymass, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -5391,8 +5391,8 @@ p13 <- ggplot(data = data, aes(x = sex, y = FCR1, shape= sex )) +
              position = position_dodge(width = 0.5), stroke = 1.5,  size = 3, alpha = 1, show.legend = FALSE) +
   geom_errorbar(data = newdat, aes(x = sex, y = fit, ymin = lwr, ymax = upr, color = sex),
                 width = 0.2, color = "black", position = position_dodge(width = 0.9), show.legend = FALSE) +
-  geom_text(data = count_data, aes(x = sex, y = min(data$FCR1, na.rm = TRUE) - 0.01, label = paste("n =", N)), 
-            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE) +  # Add count labels
+  geom_text(data = count_data, aes(x = sex, y = min(data$FCR1, na.rm = TRUE) - 0.01, label = paste0("italic(n) == ", N)), 
+            position = position_dodge(width = 1), size = 3, alpha = 0.5, color = "black", fontface = "bold", show.legend = FALSE, parse = TRUE) +  # Add count labels
   scale_y_continuous(limits = c(0, max(data$FCR1, na.rm = TRUE))) +
   custom_theme 
 
@@ -5464,8 +5464,8 @@ p14 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = age, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = age, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = age, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -5544,8 +5544,8 @@ p15 <- ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "none")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = bodymass, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = bodymass, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = bodymass, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -5634,8 +5634,8 @@ ss2<-ggplot() + # Start without default data or aes
   custom_theme +
   theme(legend.position = "right")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5) + 
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE) + 
   geom_line(data = newdat, aes(x = d13C, y = fit), linetype = "solid", color = "black", alpha = 0.5, size = 1) +
   geom_ribbon(data = newdat, aes(x = d13C, ymin = lwr, ymax = upr), fill = "grey", alpha = 0.2) + # Shade between lwr and upr
   geom_line(data = newdat, aes(x = d13C, y = lwr), linetype = "dashed", color = "grey", alpha = 0.5, size = 1) +
@@ -5724,8 +5724,8 @@ p_CMR_hg <-ggplot() +
   scale_x_continuous(breaks = seq(min(data$hg, na.rm = TRUE), max(data$hg, na.rm = TRUE), by = 3)) + # Set age ticks by 3
   theme(legend.position = "right")+
   geom_text(
-    aes(x = Inf, y = Inf, label = paste("n =", total_count)),
-    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5
+    aes(x = Inf, y = Inf, label = paste0("italic(n) == ", total_count)),
+    size = 3, color = "black", fontface = "bold", hjust = 1.5, vjust = 1.5, parse = TRUE
   )
 
 p_CMR_hg
